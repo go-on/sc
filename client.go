@@ -54,7 +54,7 @@ type Client struct {
 	doneChan       chan *osc.Message // doneChan relays /done messages
 	gqueryTreeChan chan *osc.Message // gqueryTreeChan relays /done messages
 
-	oscConn osc.Conn
+	oscConn *osc.UDPConn
 
 	// next synth node ID
 	nextSynthID int32
